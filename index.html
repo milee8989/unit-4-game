@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Crystal Collector</title>
+    <!-- bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+
+
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- header jumbogron -->
+        <div class="jumbotron" style="background-color: lightskyblue; color: white;">
+            <div class="container">
+                <h1 class="text-center"><strong>Crystal Collector</strong></h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- main content row -->
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-12">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="text-center">Instruction</h3>
+                    </div>
+                    <div class="text-center">
+                        <h5>Click the Crystals until you hit the target number!</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title text-center">Target Number</h3>
+                </div>
+                <div class="panel-body">
+                    <h3 class="text-center" id="targetNumber"></h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title text-center">Your Number</h3>
+                    </div>
+                    <div class="panel-body">
+                        <h3 class="text-center" id="yourNumber"></h3>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+            <div class="col-lg-3">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title text-center">Crystal Selection</h3>
+                    </div>
+                    <div class="panel-body text-center">
+                        <img src="assets/images/tower.jfif " alt="" id="crystal1" style="max-width: 100px">
+                        <img src="assets/images/pink.png " alt="" id="crystal2" style="max-width: 100px">
+                        <img src="assets/images/purple.jfif " alt="" id="crystal3" style="max-width: 100px">
+                        <img src="assets/images/multi.jfif " alt="" id="crystal4" style="max-width: 100px">
+
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="col-lg-3">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title text-center">wins</h3>
+                        </div>
+                        <div class="panel-body">
+                            <h3 class="text-center" id="winCount"></h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title text-center">Losses</h3>
+                        </div>
+                        <div class="panel-body">
+                            <h3 class="text-center" id="lossCount"></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+    <script src="assets/javascript/game.js"></script>
+</script>
+
+</body>
+
+</html>
