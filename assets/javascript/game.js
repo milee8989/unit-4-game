@@ -14,7 +14,7 @@ var currentNumber = 0;
 var targetNumber = Math.floor(Math.random()* 120) + 10;
 var counter = 0 ;
 var wincount = 0;
-var lossescount = 0;
+var lostcount = 0;
 
 
 
@@ -46,11 +46,7 @@ var lossescount = 0;
         $("#yourNumber").html(currentNumber);
         $("#targetNumber").html(targetNumber);
 
-        // console.log("-------------------------")
-        // console.log("Target Number:" + targetNumber);
-        // console.log("crystal1: " + crystal1.value +"| crystal2: " + crystal2.value +" | crystal3:" + crystal3.value +" | crystal4:" + crystal4.value);
-        // console.log("-------------------------")
-        
+       
         
         
     }
@@ -65,62 +61,53 @@ var lossescount = 0;
         console.log("value" + crystalId);
     })
     
-///////////////////////////////////////////////////////////////
-    // var addValues = function(crystal){
-    
-    //     currentNumber = currentNumber + crystalId
-        
-    //     $("#yourNumber").html(currentNumber);
-        
-    //     checkwin();
 
-    //     console.log("yourNumber: " + currentNumber);
-    // }
-    
-    // var crystalValue = ($("#crystal1").attr("data-crystalValue"));
-    // crystalValue = parseInt(crystalValue);
-
-    // counter += crystalValue;
-
-    // alert("New score: " + counter);
-
-    // if (counter === targerNumber){
-    //     alert("you win");
-    // }
-    // else if (counter >= targetNumber) {
-    //     alert("you lose");
-    // }
-    
 
     var checkwin = function(){
         if(currentNumber > targetNumber){
+            alert("you lost");
             lostcount++;
             $("#losscount").html(lostcount);
-            var answer=confirm("you lost, do you wanna play again?");
-            console.log(answer);
-
-            if (answer){
-                startGame();
-            }
+            //var answer=confirm("you lost, do you wanna play again?");
+           reset();
+            
+            // if (answer){
+            //     startGame();
+            // }
             
         }
 
     
         else if (yourNumber == targetNumber){
-            
+            alert("you won");
             wincount++;
             $("#wincount").html(wincount);
-            var answer=confirm("you won");
-            console.log(answer);
+           // var answer=confirm("you won");
+            reset();
 
-            if (answer){
-                startGame();
-            }
+            // if (answer){
+            //     startGame();
+            // }
         }
            
 
 
     }
+
+    function reset(){
+
+        var getRandom = function(min, max){
+            return Math.floor(Math.random() * (max) + (min));}
+            $("#targetNumber").text(targetNumber);
+    
+        crystal.crystal1     = getRandom(1,12)
+        crystal.crystal2    = getRandom(1,12)
+        crystal.crystal3    = getRandom(1,12)
+        crystal.crystal4   = getRandom(1,12)
+        currentNumber= 0;
+        $("#yourNumber").text(currentNumber);
+
+        }
     
 
     
